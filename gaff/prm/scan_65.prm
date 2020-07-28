@@ -1,0 +1,65 @@
+* Force Field Parameter File.
+* 
+
+BOND
+ca ca  461.10   1.398
+ca n   384.20   1.412
+ca ha  345.80   1.086
+cc h5  351.70   1.082
+cc n   425.10   1.381
+cc n2  576.10   1.290
+c  n   427.60   1.379
+c  o   637.70   1.218
+hn n   403.20   1.013
+n  n2  517.50   1.360
+
+ANGLE
+ca ca ca   66.620     120.020
+ca ca ha   48.180     119.880
+ca n  cc   66.440     114.010
+ca n  c    63.820     123.710
+ca ca n    67.870     120.190
+cc n  c    64.680     123.270
+cc n2 n    70.490     117.980	! same as ce n2 n 
+cc n2 n    70.490     117.980
+c  n  hn   48.330     117.550
+c  n  n2   67.680     119.910
+h5 cc n    50.800     115.700
+h5 cc n2   51.810     123.280
+n  c  n    72.900     113.560
+n  c  o    74.220     123.050
+hn n  n2   49.770     119.080
+n  cc n2   73.230     119.420
+
+DIHEDRAL
+X  ca ca X      3.625         2     180.0
+X  ca n  X      0.450         2     180.0
+X  n  cc X      1.650         2     180.0
+h5 cc n2 n      4.150         2     180.0      ! same as X  c2 n2 X 
+n  cc n2 n      4.150         2     180.0      ! same as X  c2 n2 X 
+X  c  n  X      2.500         2     180.0
+hn n  c  o      2.500         2     180.0
+hn n  c  o      2.000         1       0.0
+X  n  n2 X      0.400         2       0.0
+
+IMPHI
+ca ca ca n      1.100         2     180.0	! Using default value
+X  X  ca ha     1.100         2     180.0
+h5 n  cc n2     1.100         2     180.0	! Using default value
+X  X  c  o     10.500         2     180.0
+c  hn n  n2     1.100         2     180.0	! Using default value
+c  ca n  cc     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ c      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+h5      0.00   -0.0150    1.3590      0.00   -0.0075    1.3590
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+ n      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+hn      0.00   -0.0157    0.6000      0.00   -0.0078    0.6000
+n2      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+ o      0.00   -0.2100    1.6612      0.00   -0.1050    1.6612

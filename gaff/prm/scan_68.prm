@@ -1,0 +1,53 @@
+* Force Field Parameter File.
+* 
+
+BOND
+ca ca  461.10   1.398
+ca cd  385.10   1.456
+ca na  420.50   1.384
+ca ha  345.80   1.086
+cc h4  352.00   1.082
+cc na  425.80   1.380
+cc cd  500.90   1.373
+cd ha  349.10   1.084
+
+ANGLE
+ca ca ca   66.620     120.020
+ca ca na   69.080     118.340
+ca ca ha   48.180     119.880
+ca cd cc   67.620     113.510
+ca cd ha   45.830     124.040
+ca ca cd   65.020     120.790
+ca na ca   65.340     120.050
+ca na cc   67.400     113.150
+cc cd ha   48.540     121.760
+h4 cc na   49.790     120.530
+h4 cc cd   47.270     128.480
+na cc cd   73.430     106.990
+
+DIHEDRAL
+X  ca ca X      3.625         2     180.0
+ca ca cd cc     0.700         2     180.0      ! same as X  c2 ca X 
+ca ca cd ha     0.700         2     180.0      ! same as X  c2 ca X 
+X  ca na X      0.300         2     180.0
+X  cc na X      1.700         2     180.0
+X  cc cd X      4.000         2     180.0
+
+IMPHI
+ca ca ca cd     1.100         2     180.0	! Using default value
+ca ca ca na     1.100         2     180.0	! Using default value
+X  X  ca ha     1.100         2     180.0
+cd h4 cc na     1.100         2     180.0	! Using default value
+ca ca na cc     1.100         2     180.0	! Using default value
+ca cc cd ha     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+h4      0.00   -0.0150    1.4090      0.00   -0.0075    1.4090
+na      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080

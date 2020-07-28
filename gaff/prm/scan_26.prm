@@ -1,0 +1,74 @@
+* Force Field Parameter File.
+* 
+
+BOND
+cc cd  500.90   1.373
+cc cc  419.80   1.428
+cc ha  349.10   1.084
+cd n   425.10   1.381
+cd cd  419.80   1.428
+c  n   427.60   1.379
+hn n   403.20   1.013
+cd ss  265.80   1.756
+c  cd  371.00   1.468
+c  o   637.70   1.218
+cd ha  349.10   1.084
+cd h4  352.00   1.082
+
+ANGLE
+cc cd n    68.940     121.330
+cc cd cd   68.150     114.190
+cc cc cd   68.150     114.190
+cc cc ha   47.150     121.070
+cd cc ha   48.540     121.760
+cd n  c    64.680     123.270
+cd n  hn   47.920     119.260
+cd cd ss   61.930     120.210
+cc cd c    65.090     121.350
+cc cd ha   48.540     121.760
+n  cd cd   67.960     119.890
+n  c  cd   69.070     112.700
+n  c  o    74.220     123.050
+cd ss cd   66.150      90.240
+c  n  hn   48.330     117.550
+c  cd ha   46.920     116.640
+cd c  o    69.140     123.930
+cc cd ss   64.850     111.550
+ss cd h4   42.060     119.970
+cc cd h4   47.270     128.480
+
+DIHEDRAL
+X  cc cd X      4.000         2     180.0
+X  cc cc X      4.000         2     180.0
+X  n  cd X      1.650         2     180.0
+X  cd cd X      4.000         2     180.0
+X  c  n  X      2.500         2     180.0
+hn n  c  o      2.500         2     180.0
+hn n  c  o      2.000         1       0.0
+cd cd ss cd     1.100         2     180.0      ! same as X  c2 ss X 
+cc cd ss cd     1.100         2     180.0      ! same as X  c2 ss X 
+X  c  cd X      2.875         2     180.0
+cd ss cd h4     1.100         2     180.0      ! same as X  c2 ss X 
+
+IMPHI
+cc cd cc ha     1.100         2     180.0	! Using default value
+cc cd cd n      1.100         2     180.0	! Using default value
+X  X  n  hn     1.100         2     180.0
+cc cd cd ss     1.100         2     180.0	! Using default value
+X  X  c  o     10.500         2     180.0
+c  cc cd ha     1.100         2     180.0	! Using default value
+cc h4 cd ss     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+ n      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+ c      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+hn      0.00   -0.0157    0.6000      0.00   -0.0078    0.6000
+ o      0.00   -0.2100    1.6612      0.00   -0.1050    1.6612
+ss      0.00   -0.2500    2.0000      0.00   -0.1250    2.0000
+h4      0.00   -0.0150    1.4090      0.00   -0.0075    1.4090

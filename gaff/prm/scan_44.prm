@@ -1,0 +1,87 @@
+* Force Field Parameter File.
+* 
+
+BOND
+ca ca  461.10   1.398
+ca ha  345.80   1.086
+ca cc  385.10   1.456
+ca nb  488.00   1.339
+cc cc  419.80   1.428
+cc cd  500.90   1.373
+cc ha  349.10   1.084
+cd h4  352.00   1.082
+cd n   425.10   1.381
+ca h4  341.50   1.089
+c  cd  371.00   1.468
+cd ha  349.10   1.084
+c  n   427.60   1.379
+hn n   403.20   1.013
+c  o   637.70   1.218
+
+ANGLE
+ca ca cc   65.020     120.790
+ca ca nb   68.830     122.940
+ca ca ca   66.620     120.020
+ca ca ha   48.180     119.880
+ca cc cc   67.170     111.040
+ca cc cd   67.620     113.510
+ca nb ca   68.350     117.220
+cc ca nb   68.720     117.750
+cc cc cd   68.150     114.190
+cc cc ha   47.150     121.070
+cc cd h4   47.270     128.480
+cc cd n    68.940     121.330
+nb ca h4   51.880     116.030
+ca ca h4   48.060     120.340
+cc cd c    65.090     121.350
+cc cd ha   48.540     121.760
+cd n  c    64.680     123.270
+cd n  hn   47.920     119.260
+cd cc ha   48.540     121.760
+cd c  n    69.070     112.700
+cd c  o    69.140     123.930
+h4 cd n    50.810     115.690
+n  c  o    74.220     123.050
+c  cd ha   46.920     116.640
+c  n  hn   48.330     117.550
+
+DIHEDRAL
+X  ca ca X      3.625         2     180.0
+ca ca cc cc     0.700         2     180.0      ! same as X  c2 ca X 
+nb ca cc cc     0.700         2     180.0      ! same as X  c2 ca X 
+ca ca cc cd     0.700         2     180.0      ! same as X  c2 ca X 
+nb ca cc cd     0.700         2     180.0      ! same as X  c2 ca X 
+X  ca nb X      4.800         2     180.0
+X  cc cc X      4.000         2     180.0
+X  cc cd X      4.000         2     180.0
+X  n  cd X      1.650         2     180.0
+X  c  cd X      2.875         2     180.0
+X  c  n  X      2.500         2     180.0
+hn n  c  o      2.500         2     180.0
+hn n  c  o      2.000         1       0.0
+
+IMPHI
+X  X  ca ha     1.100         2     180.0
+ca cc ca nb     1.100         2     180.0	! Using default value
+ca cc cc cd     1.100         2     180.0	! Using default value
+cc cd cc ha     1.100         2     180.0	! Using default value
+cc h4 cd n      1.100         2     180.0	! Using default value
+ca h4 ca nb     1.100         2     180.0	! Using default value
+c  cc cd ha     1.100         2     180.0	! Using default value
+X  X  n  hn     1.100         2     180.0
+X  X  c  o     10.500         2     180.0
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+nb      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+h4      0.00   -0.0150    1.4090      0.00   -0.0075    1.4090
+ n      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+ c      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+hn      0.00   -0.0157    0.6000      0.00   -0.0078    0.6000
+ o      0.00   -0.2100    1.6612      0.00   -0.1050    1.6612

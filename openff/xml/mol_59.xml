@@ -1,0 +1,55 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2020-05-20</DateGenerated>
+  </Info>
+  <Residues>
+    <Residue name="5-p">
+      <Atom name="C1" type="ca" charge="-0.1365"/>
+      <Atom name="C2" type="ca" charge="-0.0998"/>
+      <Atom name="C3" type="ca" charge="-0.0998"/>
+      <Atom name="C4" type="ca" charge="-0.133"/>
+      <Atom name="H1" type="ha" charge="0.1433"/>
+      <Atom name="C5" type="ca" charge="-0.133"/>
+      <Atom name="H2" type="ha" charge="0.1433"/>
+      <Atom name="C6" type="ca" charge="-0.1127"/>
+      <Atom name="H3" type="ha" charge="0.138"/>
+      <Atom name="H4" type="ha" charge="0.138"/>
+      <Atom name="H5" type="ha" charge="0.1366"/>
+      <Atom name="C7" type="cc" charge="0.4666"/>
+      <Atom name="C8" type="cd" charge="0.503"/>
+      <Atom name="H6" type="h5" charge="0.0716"/>
+      <Atom name="N1" type="na" charge="-0.1519"/>
+      <Atom name="H7" type="hn" charge="0.3259"/>
+      <Atom name="N2" type="nc" charge="-0.524"/>
+      <Atom name="N3" type="nd" charge="-0.6756"/>
+      <Bond atomName1="C1" atomName2="C2"/>
+      <Bond atomName1="C1" atomName2="C7"/>
+      <Bond atomName1="C1" atomName2="C3"/>
+      <Bond atomName1="C2" atomName2="H1"/>
+      <Bond atomName1="C2" atomName2="C4"/>
+      <Bond atomName1="C3" atomName2="C5"/>
+      <Bond atomName1="C3" atomName2="H2"/>
+      <Bond atomName1="C4" atomName2="H3"/>
+      <Bond atomName1="C4" atomName2="C6"/>
+      <Bond atomName1="C5" atomName2="C6"/>
+      <Bond atomName1="C5" atomName2="H4"/>
+      <Bond atomName1="C6" atomName2="H5"/>
+      <Bond atomName1="C7" atomName2="N1"/>
+      <Bond atomName1="C7" atomName2="N3"/>
+      <Bond atomName1="C8" atomName2="N2"/>
+      <Bond atomName1="C8" atomName2="N3"/>
+      <Bond atomName1="C8" atomName2="H6"/>
+      <Bond atomName1="N1" atomName2="H7"/>
+      <Bond atomName1="N1" atomName2="N2"/>
+    </Residue>
+  </Residues>
+  <PeriodicTorsionForce>
+    <Proper type1="ca" type2="ca" type3="cc" type4="na" periodicity1="2" phase1="3.141592653589793" k1="2.9288"/>
+    <Proper type1="ca" type2="ca" type3="cc" type4="nd" periodicity1="2" phase1="3.141592653589793" k1="2.9288"/>
+    <Improper type1="ca" type2="ca" type3="ca" type4="cc" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="ca" type2="ca" type3="ca" type4="ha" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="cc" type2="ca" type3="na" type4="nd" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="cd" type2="h5" type3="nc" type4="nd" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="na" type2="cc" type3="hn" type4="nc" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+  </PeriodicTorsionForce>
+</ForceField>

@@ -1,0 +1,57 @@
+* Force Field Parameter File.
+* 
+
+BOND
+nd os  406.50   1.401
+cd os  386.10   1.362
+ca cc  385.10   1.456
+cc nd  525.40   1.317
+cc nc  441.10   1.369
+ca ca  461.10   1.398
+ca ha  345.80   1.086
+cd h5  351.80   1.082
+cd nc  525.40   1.317
+
+ANGLE
+os nd cc   73.280     104.670
+os cd h5   51.400     116.830
+os cd nc   74.400     116.740
+cc ca ca   65.020     120.790
+cc nc cd   71.760     105.490
+ca cc nd   67.600     123.240
+ca cc nc   67.290     120.590
+ca ca ca   66.620     120.020
+ca ca ha   48.180     119.880
+nd os cd   67.780     108.370
+nd cc nc   74.040     115.830
+h5 cd nc   50.580     125.520
+
+DIHEDRAL
+X  nd os X      4.800         2     180.0
+nd os cd h5     1.050         2     180.0      ! same as X  c2 os X 
+nd os cd nc     1.050         2     180.0      ! same as X  c2 os X 
+nd cc ca ca     0.700         2     180.0      ! same as X  c2 ca X 
+nc cc ca ca     0.700         2     180.0      ! same as X  c2 ca X 
+X  cc nd X      4.750         2     180.0
+X  cc nc X      4.750         2     180.0
+X  ca ca X      3.625         2     180.0
+X  cd nc X      4.750         2     180.0
+
+IMPHI
+ca nc cc nd     1.100         2     180.0	! Using default value
+ca ca ca cc     1.100         2     180.0	! Using default value
+X  X  ca ha     1.100         2     180.0
+h5 nc cd os     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+os      0.00   -0.1700    1.6837      0.00   -0.0850    1.6837
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+nd      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+h5      0.00   -0.0150    1.3590      0.00   -0.0075    1.3590
+nc      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240

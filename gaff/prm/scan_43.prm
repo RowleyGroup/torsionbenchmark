@@ -1,0 +1,64 @@
+* Force Field Parameter File.
+* 
+
+BOND
+ca ca  461.10   1.398
+ca cc  385.10   1.456
+ca ha  345.80   1.086
+cc cc  419.80   1.428
+cc nd  525.40   1.317
+cc ha  349.10   1.084
+cc cd  500.90   1.373
+cd h4  352.00   1.082
+cd na  425.80   1.380
+hn na  408.40   1.010
+na nd  528.40   1.354
+
+ANGLE
+ca ca ca   66.620     120.020
+ca ca ha   48.180     119.880
+ca cc cc   67.170     111.040
+ca cc nd   67.600     123.240
+ca ca cc   65.020     120.790
+cc cc ha   47.150     121.070
+cc cc cd   68.150     114.190
+cc nd na   74.560     103.820
+cc cc nd   71.570     112.560
+cc cd h4   47.270     128.480
+cc cd na   73.430     106.990
+ha cc cd   48.540     121.760
+cd na hn   46.750     125.500
+cd na nd   70.040     112.360
+h4 cd na   49.790     120.530
+hn na nd   49.890     119.550
+
+DIHEDRAL
+X  ca ca X      3.625         2     180.0
+ca ca cc cc     0.700         2     180.0      ! same as X  c2 ca X 
+ca ca cc nd     0.700         2     180.0      ! same as X  c2 ca X 
+X  cc cc X      4.000         2     180.0
+X  cc nd X      4.750         2     180.0
+X  cc cd X      4.000         2     180.0
+X  cd na X      1.700         2     180.0
+X  na nd X      4.800         2     180.0
+
+IMPHI
+ca ca ca cc     1.100         2     180.0	! Using default value
+X  X  ca ha     1.100         2     180.0
+ca cc cc nd     1.100         2     180.0	! Using default value
+cc cd cc ha     1.100         2     180.0	! Using default value
+cc h4 cd na     1.100         2     180.0	! Using default value
+cd hn na nd     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+h4      0.00   -0.0150    1.4090      0.00   -0.0075    1.4090
+na      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+hn      0.00   -0.0157    0.6000      0.00   -0.0078    0.6000
+nd      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240

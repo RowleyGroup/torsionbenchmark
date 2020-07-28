@@ -1,0 +1,57 @@
+* Force Field Parameter File.
+* 
+
+BOND
+ca ca  461.10   1.398
+ca ha  345.80   1.086
+ca cc  385.10   1.456
+cc nd  525.40   1.317
+cc os  386.10   1.362
+cd nd  441.10   1.369
+nc os  406.50   1.401
+cd nc  525.40   1.317
+cd h5  351.80   1.082
+
+ANGLE
+ca ca ca   66.620     120.020
+ca ca ha   48.180     119.880
+ca ca cc   65.020     120.790
+ca cc nd   67.600     123.240
+ca cc os   69.530     114.750
+cc nd cd   71.760     105.490
+cc os nc   67.780     108.370
+nd cc os   74.400     116.740
+nd cd nc   74.040     115.830
+nd cd h5   49.610     122.920
+os nc cd   73.280     104.670
+nc cd h5   50.580     125.520
+
+DIHEDRAL
+X  ca ca X      3.625         2     180.0
+ca ca cc nd     0.700         2     180.0      ! same as X  c2 ca X 
+ca ca cc os     0.700         2     180.0      ! same as X  c2 ca X 
+X  cc nd X      4.750         2     180.0
+ca cc os nc     1.050         2     180.0      ! same as X  c2 os X 
+nd cc os nc     1.050         2     180.0      ! same as X  c2 os X 
+X  cd nd X      4.750         2     180.0
+X  nc os X      4.800         2     180.0
+X  cd nc X      4.750         2     180.0
+
+IMPHI
+X  X  ca ha     1.100         2     180.0
+ca ca ca cc     1.100         2     180.0	! Using default value
+ca nd cc os     1.100         2     180.0	! Using default value
+h5 nc cd nd     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+nd      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+os      0.00   -0.1700    1.6837      0.00   -0.0850    1.6837
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+nc      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+h5      0.00   -0.0150    1.3590      0.00   -0.0075    1.3590

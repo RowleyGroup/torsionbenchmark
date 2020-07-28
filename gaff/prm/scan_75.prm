@@ -1,0 +1,67 @@
+* Force Field Parameter File.
+* 
+
+BOND
+cc nc  441.10   1.369
+cc na  425.80   1.380
+cc cd  500.90   1.373
+ca cc  385.10   1.456
+cd h4  352.00   1.082
+cd cd  419.80   1.428
+cd nc  525.40   1.317
+cd ha  349.10   1.084
+ca ca  461.10   1.398
+ca ha  345.80   1.086
+na nc  525.40   1.356
+
+ANGLE
+cc nc cd   71.760     105.490
+cc na cc   68.480     109.900
+cc na nc   69.990     112.360
+cc cd cd   68.150     114.190
+cc cd ha   48.540     121.760
+cc ca ca   65.020     120.790
+cd cd ha   47.150     121.070
+h4 cd cd   45.870     127.960
+h4 cd nc   52.060     118.470
+cd nc na   74.510     103.820
+cd cc ca   67.620     113.510
+cd cc na   73.430     106.990
+cd cd nc   71.570     112.560
+ca cc na   66.280     123.450
+ca ca ca   66.620     120.020
+ca ca ha   48.180     119.880
+nc cc na   70.560     121.950
+nc cc cd   72.170     111.650
+
+DIHEDRAL
+X  cc nc X      4.750         2     180.0
+X  cc na X      1.700         2     180.0
+X  cc cd X      4.000         2     180.0
+cd cc ca ca     0.700         2     180.0      ! same as X  c2 ca X 
+na cc ca ca     0.700         2     180.0      ! same as X  c2 ca X 
+X  cd cd X      4.000         2     180.0
+X  cd nc X      4.750         2     180.0
+X  ca ca X      3.625         2     180.0
+X  na nc X      4.800         2     180.0
+
+IMPHI
+cd na cc nc     1.100         2     180.0	! Using default value
+ca cd cc na     1.100         2     180.0	! Using default value
+cd h4 cd nc     1.100         2     180.0	! Using default value
+cc cd cd ha     1.100         2     180.0	! Using default value
+ca ca ca cc     1.100         2     180.0	! Using default value
+X  X  ca ha     1.100         2     180.0
+cc cc na nc     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+h4      0.00   -0.0150    1.4090      0.00   -0.0075    1.4090
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+nc      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+na      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
